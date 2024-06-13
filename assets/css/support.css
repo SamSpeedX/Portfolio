@@ -1,0 +1,48 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.containers {
+    width: 100%;
+    height: 90dvh;
+    display: grid;
+    align-items: center;
+    place-items: center;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.skills, .money {
+    margin-top: 0.8rem;
+    color: #fff;
+    width: 5rem;
+    height: 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: #129;
+    transition: background-color 1s;
+}
+
+.skills:hover, .money:hover {
+    background-color: #893;
+}
+
+.Question1 {
+    /* display: none; */
+    content: "";
+}
+
+.Question2 {
+    display: none;
+}
+
+.amount {
+    width: 6rem;
+    height: 2rem;
+}

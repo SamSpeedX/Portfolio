@@ -1,0 +1,58 @@
+.form-container {
+    display: grid;
+    align-items: center;
+    place-items: center;
+}
+
+.form-container form {
+    border-radius: 1rem;
+    text-align: center;
+    background-color: #115;
+}
+
+.email {
+    color: #fff;
+    width: 70%;
+    height: 2rem;
+    outline: none;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: 0.2rem solid #fff;
+    background-color: transparent;
+}
+
+.email:focus {
+    border: 0.2rem solid #190;
+}
+
+.verify {
+    color: white;
+    width: 70%;
+    height: 2rem;
+    outline: none;
+    outline: none;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: #119;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.verify:hover {
+    background-color: #190;
+}
+
+.back {
+    display: grid;
+    align-items: center;
+    place-items: center;
+    width: 4rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: #115;
+    border-radius: 0.6rem;
+}
+
+.back:hover {
+    cursor: pointer;
+    background-color: #190;
+}
