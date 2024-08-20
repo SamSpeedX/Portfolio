@@ -3,6 +3,9 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 session_start();
 
+header("location: home.php");
+exit;
+
 if (!isset($_SESSION['user_id'])) {
     header("location: logout.php");
     // exit('Your try to cheap system');
