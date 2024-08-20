@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +24,6 @@
                     <div class="light" id="light">Light</div>
                     <div class="dark" id="dark">Dark</div>
                 </div>
-            <!-- </div>
-
-            <div class="theme" id="theme"> -->
                 <h3>Text size</h3>
                 <div class="font-modal">
                     <select name="" id="font">
@@ -31,19 +31,12 @@
                         <option value="0.8">small</option>
                         <option value="1.5">big</option>
                     </select>
-                    <!-- <input type="number" name="font" id="font" placeholder="enter Text size"> -->
                     <br><br>
                     <button id="save">save</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- <section id="loading">
-        <div class="loading">
-            <div class="loder" id="loder"></div>
-        </div>
-    </section> -->
     <script src="assets/js/setting.js"></script>
     <script src="./assets/js/all.min.js"></script>
 </body>
