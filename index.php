@@ -1,10 +1,15 @@
+<?php
+if (isset($_SESSION['username'])) {
+    header("location: home.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <!-- <meta http-equiv="refresh" content="10"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/Polish_20240316_195622709.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -41,12 +46,6 @@
     </script>
 </head>
 <body id="body">
-    <div class="container" id="offline">
-        <div class="offline">
-            <h2>Offline</h2>
-            <p>Sorry you can't access this page offline</p>
-        </div>
-    </div>
     <header id="header">
         <div class="flexe">
             <div class="logo"><img src="assets/img/Polish_20240316_195622709.png" alt=""></div>
@@ -246,7 +245,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>2023 - 2024&copy; SAM OCHU | Power by <a href="http://samochu.com" target="_blank" rel="noopener noreferrer">SAM HOST</a></p>
+            <p>2023 - 2024&copy; SAM OCHU | Power by <a href="http://samtechnology.koyeb.app/" target="_blank" rel="noopener noreferrer">SAM OCHU</a></p>
         </div>
     </footer>
     <!-- <script src="assets/js/theme.js"></script> -->
