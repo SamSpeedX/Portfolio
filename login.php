@@ -1,58 +1,14 @@
 <?php
-// @include_once 'system/config.php';
-// $host = "localhost";
-// $name = "root";
-// $pass = "";
-// $db = "sam";
-
-// $sam = mysqli_connect('$host', '$name', '$pass', '$db');
-// if (!$sam) {
-//     die("fail". "<br>". mysqli_connect_error());
-// }
-
-// if ($_SERVER['REQUEST_METHOD'] === "POST") {
-//     $username = $_POST["username"];
-//     $password = $_POST["password"];
-
-//     $sql = "SELECT * FROM users WHERE username = '$username'";
-//     $result = $sam->query($sql);
-
-//     if ($result->num_rows === 1) {
-//         $row = $result->fetch_assoc();
-//         if (password_verify($password, $row["password"])) {
-//             // User login successful, store user data in the session
-//             $_SESSION["id"] = $row["Id"];
-//             $id = $_SESSION['id'];
-//             $_SESSION["username"] = $row["username"]; 
-//             // echo "<input type='hidden' value='$id' id='input'>";
-//             header("Location: ../home.php");
-//             exit();
-//         } else {
-//             // Incorrect password, show error message
-//             $passerr = "Incorrect password! <br> Msimbo si sahihi!";
-//         }
-//     } else {
-//         // User not found, show error message
-//         $usererr = "User not found! <br> Mtumiaji hajapatikana!";
-//     }
-// }
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'post') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $_SESSION['user_id'] = $password;
-    $_SESSION['username'] = $username;
-
-    header("location: home.php");
-    exit();
+   if ($username == $_SESSION['username']) {
+      header("location: home.php");
+      exit();
+   }
 }
-$_SESSION['username'] = "sam ochu";
-$_SESSION['user_id'] = "1";
-$_SESSION['email'] = "samochu@sam.com";
-
-header("location: home.php");
-exit();
 ?>
 <!DOCTYPE html>
 <html lang="en">
