@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header("location: logout.php");
+if (!isset($_SESSION['username'])) {
+    header("location: login.php");
     exit();
 }
 ?>
