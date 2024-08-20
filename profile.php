@@ -3,12 +3,9 @@ $ip = $_SERVER['REMOTE_ADDR'];
 
 session_start();
 
-header("location: home.php");
-exit;
-
 if (!isset($_SESSION['user_id'])) {
-    header("location: logout.php");
-    // exit('Your try to cheap system');
+    header("location: login.php");
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -17,7 +14,6 @@ if (!isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <!-- <meta http-equiv="refresh" content="10"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/img/Polish_20240316_195622709.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/style.css">
