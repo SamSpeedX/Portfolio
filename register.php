@@ -1,6 +1,14 @@
 <?php
-header("location: home.php");
-exit;
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['email'] = $_POST['email'];
+    $_SESSION['password'] = $_POST['password'];
+
+    header("location: login.php");
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +21,7 @@ exit;
 <body id="body">
     <div class="form-container">
         <div class="register-form">
-            <form action="login.php" method="post" id="form">
+            <form action="" method="post" id="form">
                 <h4><p>mandatory mark <span>*</span></p></h4>
                 <div class="holder1">
                     <label for="username">
